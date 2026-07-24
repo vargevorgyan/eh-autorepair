@@ -76,6 +76,15 @@ body {
     font-weight: 800;
     color: var(--gold);
     letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #fff;
 }
 
 .logo i {
@@ -994,6 +1003,11 @@ section {
 @media (max-width: 480px) {
     .logo {
         font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 36px;
+        height: 36px;
     }
 
     .logo i {
