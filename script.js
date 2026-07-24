@@ -1,267 +1,165 @@
-// ==================== NAVIGATION SCROLL EFFECT ====================
-const navbar = document.getElementById('navbar');
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+const galleryData = [
+  {
+    src: "assets/hero_bg.png",
+    category: "Collision Repair",
+    title: "Chassis Alignment & Tuning",
+    desc: "Premium Porsche body restoration & precision suspension tuning.",
+  },
+  {
+    src: "assets/paint_job.png",
+    category: "Custom Paint",
+    title: "Satin Black Refinishing",
+    desc: "Computerized multi-stage painting & gloss correction.",
+  },
+  {
+    src: "assets/collision_repair.png",
+    category: "Collision Repair",
+    title: "Body Panel Reconstruction",
+    desc: "High-grade carbon fiber repair & structural reinforcement.",
+  },
+  {
+    src: "assets/detailing.png",
+    category: "Detailing",
+    title: "9H Ceramic Coating Polish",
+    desc: "Deep gloss wet-look finish & paint protection film detail.",
+  },
+];
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Navbar
+const navbar = document.getElementById("navbar");
+const menuBtn = document.getElementById("menu-btn");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 20);
 });
 
-// ==================== MOBILE MENU TOGGLE ====================
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+menuBtn.addEventListener("click", () => {
+  navbar.classList.toggle("open");
 });
 
-// Close mobile menu when clicking on a nav link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+document.querySelectorAll(".mobile-link").forEach((link) => {
+  link.addEventListener("click", () => navbar.classList.remove("open"));
+});
+
+// Gallery filters + lightbox
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxCat = document.getElementById("lightbox-cat");
+const lightboxTitle = document.getElementById("lightbox-title");
+const lightboxDesc = document.getElementById("lightbox-desc");
+let activeIndex = null;
+
+filterButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.dataset.filter;
+    galleryItems.forEach((item) => {
+      const show = filter === "all" || item.dataset.category === filter;
+      item.classList.toggle("hidden", !show);
     });
+  });
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }
-});
-
-// ==================== SMOOTH SCROLLING ====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const offsetTop = targetElement.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe all service cards
-document.querySelectorAll('.service-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(50px)';
-    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Observe all gallery items
-document.querySelectorAll('.gallery-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateY(50px)';
-    item.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(item);
-});
-
-// Observe testimonial cards
-document.querySelectorAll('.testimonial-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(50px)';
-    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Observe contact cards
-document.querySelectorAll('.contact-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(50px)';
-    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// Observe insurance section
-const insuranceSection = document.querySelector('.insurance-section');
-if (insuranceSection) {
-    insuranceSection.style.opacity = '0';
-    insuranceSection.style.transform = 'translateY(50px)';
-    insuranceSection.style.transition = 'all 0.8s ease';
-    observer.observe(insuranceSection);
+function openLightbox(index) {
+  activeIndex = index;
+  const item = galleryData[index];
+  lightboxImg.src = item.src;
+  lightboxImg.alt = item.title;
+  lightboxCat.textContent = item.category;
+  lightboxTitle.textContent = item.title;
+  lightboxDesc.textContent = item.desc;
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 }
 
-// ==================== ACTIVE NAV LINK ON SCROLL ====================
-const sections = document.querySelectorAll('section[id]');
-
-function highlightNavLink() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            if (navLink) {
-                navLink.classList.add('active');
-            }
-        }
-    });
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+  activeIndex = null;
 }
 
-window.addEventListener('scroll', highlightNavLink);
-
-// ==================== PARALLAX EFFECT FOR HERO ====================
-const hero = document.querySelector('.hero');
-const heroContent = document.querySelector('.hero-content');
-
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallaxSpeed = 0.5;
-    
-    if (scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
-    }
-});
-
-// ==================== GALLERY LIGHTBOX EFFECT ====================
-const galleryItems = document.querySelectorAll('.gallery-item');
-
-galleryItems.forEach(item => {
-    item.addEventListener('click', function() {
-        // Add a simple scale animation on click
-        this.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            this.style.transform = 'scale(1)';
-        }, 200);
-    });
-});
-
-// ==================== SCROLL TO TOP BUTTON ====================
-// Create scroll to top button
-const scrollTopBtn = document.createElement('button');
-scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollTopBtn.setAttribute('id', 'scrollTopBtn');
-scrollTopBtn.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #d4a024, #b8860b);
-    color: #0a0a0a;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 999;
-    box-shadow: 0 10px 30px rgba(212, 160, 36, 0.3);
-`;
-
-document.body.appendChild(scrollTopBtn);
-
-// Show/hide scroll to top button
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-        scrollTopBtn.style.opacity = '1';
-        scrollTopBtn.style.visibility = 'visible';
-    } else {
-        scrollTopBtn.style.opacity = '0';
-        scrollTopBtn.style.visibility = 'hidden';
-    }
-});
-
-// Scroll to top functionality
-scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Hover effect for scroll to top button
-scrollTopBtn.addEventListener('mouseenter', () => {
-    scrollTopBtn.style.transform = 'translateY(-5px) scale(1.1)';
-    scrollTopBtn.style.boxShadow = '0 15px 40px rgba(212, 160, 36, 0.5)';
-});
-
-scrollTopBtn.addEventListener('mouseleave', () => {
-    scrollTopBtn.style.transform = 'translateY(0) scale(1)';
-    scrollTopBtn.style.boxShadow = '0 10px 30px rgba(212, 160, 36, 0.3)';
-});
-
-// ==================== LOADING ANIMATION ====================
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-// ==================== TYPING EFFECT FOR HERO SUBTITLE (OPTIONAL) ====================
-// You can enable this for a cool typing effect on the hero subtitle
-/*
-const heroSubtitle = document.querySelector('.hero-subtitle');
-const originalText = heroSubtitle.textContent;
-heroSubtitle.textContent = '';
-
-let charIndex = 0;
-function typeWriter() {
-    if (charIndex < originalText.length) {
-        heroSubtitle.textContent += originalText.charAt(charIndex);
-        charIndex++;
-        setTimeout(typeWriter, 30);
-    }
+function navigateLightbox(direction) {
+  if (activeIndex === null) return;
+  if (direction === "prev") {
+    activeIndex = activeIndex === 0 ? galleryData.length - 1 : activeIndex - 1;
+  } else {
+    activeIndex = activeIndex === galleryData.length - 1 ? 0 : activeIndex + 1;
+  }
+  openLightbox(activeIndex);
 }
 
-// Start typing effect after hero loads
-setTimeout(typeWriter, 1000);
-*/
+galleryItems.forEach((item) => {
+  item.addEventListener("click", () => openLightbox(Number(item.dataset.index)));
+});
 
-// ==================== COUNTER ANIMATION (FOR FUTURE USE) ====================
-function animateCounter(element, target, duration) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    
-    const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(start);
-        }
-    }, 16);
-}
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+document.getElementById("lightbox-prev").addEventListener("click", () => navigateLightbox("prev"));
+document.getElementById("lightbox-next").addEventListener("click", () => navigateLightbox("next"));
 
-// ==================== CONSOLE MESSAGE ====================
-console.log('%c🚗 Welcome to EH Auto Repair! 🔧', 'color: #d4a024; font-size: 20px; font-weight: bold;');
-console.log('%cWebsite crafted with excellence and attention to detail.', 'color: #f5f5f5; font-size: 14px;');
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
 
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("open")) return;
+  if (e.key === "Escape") closeLightbox();
+  if (e.key === "ArrowLeft") navigateLightbox("prev");
+  if (e.key === "ArrowRight") navigateLightbox("next");
+});
+
+// Service dropdown
+const dropdown = document.getElementById("service-dropdown");
+const serviceBtn = document.getElementById("service-btn");
+const serviceLabel = document.getElementById("service-label");
+const serviceInput = document.getElementById("service");
+const serviceMenu = document.getElementById("service-menu");
+
+serviceBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("open");
+});
+
+serviceMenu.querySelectorAll("button").forEach((option) => {
+  option.addEventListener("click", () => {
+    serviceInput.value = option.dataset.value;
+    serviceLabel.textContent = option.dataset.value;
+    serviceLabel.classList.remove("placeholder");
+    dropdown.classList.remove("open");
+  });
+});
+
+document.addEventListener("mousedown", (e) => {
+  if (!dropdown.contains(e.target)) dropdown.classList.remove("open");
+});
+
+// Booking form (same simulated success as Next app)
+const form = document.getElementById("booking-form");
+const formSuccess = document.getElementById("form-success");
+const formReset = document.getElementById("form-reset");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!serviceInput.value) {
+    dropdown.classList.add("open");
+    return;
+  }
+  setTimeout(() => {
+    form.classList.add("hidden");
+    formSuccess.classList.add("show");
+    form.reset();
+    serviceInput.value = "";
+    serviceLabel.textContent = "Select a Service";
+    serviceLabel.classList.add("placeholder");
+  }, 800);
+});
+
+formReset.addEventListener("click", () => {
+  formSuccess.classList.remove("show");
+  form.classList.remove("hidden");
+});

@@ -3,567 +3,511 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EH Auto Repair - Premium Auto Body & Paint Services</title>
-    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <title>E.H. Auto Repair</title>
+    <meta
+      name="description"
+      content="Professional body repair and painting services."
+    />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
-      <div class="container">
-        <div class="nav-content">
-          <a href="#home" class="logo">
-            <img src="assets/logo.png" alt="E.H. Auto Repair" class="logo-img" />
-            <span>EH AUTO REPAIR</span>
+      <div class="container nav-inner">
+        <a href="#home" class="brand">
+          <img src="assets/e_h_logo.png" alt="E.H. Auto Repair Logo" />
+          <div>
+            <div class="brand-title">E.H. <span>AUTO</span></div>
+            <p class="brand-sub">Repair & Paint</p>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <a href="tel:+19162565196" class="nav-phone">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+1 (916) 256-5196</span>
           </a>
-          <ul class="nav-menu" id="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-            <li><a href="#gallery" class="nav-link">Gallery</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a href="#contact" class="nav-book">Book Now</a>
+        </div>
+
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle menu">
+          <svg class="icon icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+          <svg class="icon icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+          <a href="#services" class="mobile-link">Services</a>
+          <a href="#gallery" class="mobile-link">Gallery</a>
+          <a href="#contact" class="mobile-link">Contact</a>
+          <div class="mobile-menu-footer">
+            <a href="tel:+19162565196" class="nav-phone">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (916) 256-5196</span>
+            </a>
+            <a href="#contact" class="mobile-book mobile-link">Book Now</a>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-badge">
+              <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6L5.7 21 8 14 2 9.4h7.6L12 2z"/></svg>
+              <span>The Gold Standard in Auto Restoration</span>
+            </div>
+            <h1>
+              Precision Repair.<br />
+              <span class="text-gold-gradient">Flawless Finish.</span>
+            </h1>
+            <p class="hero-copy">
+              At <strong>E.H. Auto Repair</strong>, we combine state-of-the-art
+              repair technology with master craftsmanship. Specialized in
+              high-end collision restoration, expert bodywork, and luxury
+              painting services.
+            </p>
+            <div class="hero-meta">
+              <div class="hero-meta-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </div>
+              <span>Certified Experts</span>
+            </div>
+            <div class="hero-actions">
+              <a href="#services" class="btn-gold">
+                <span>View Services</span>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="#gallery" class="btn-outline">View Gallery</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-media-glow"></div>
+            <div class="hero-media-frame">
+              <img src="assets/hero_bg.png" alt="E.H. Auto Repair Workshop Showcase" />
+              <div class="hero-media-overlay"></div>
+              <div class="hero-stats glass-panel">
+                <div>
+                  <p class="label">Industry Experts</p>
+                  <p class="value">22+ Years Experience</p>
+                </div>
+                <div>
+                  <p class="rating">4.9</p>
+                  <p class="rating-label">Google Rating</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
         <div class="container">
-          <h1 class="hero-title fade-in">
-            Excellence in <span class="golden">Auto Repair</span>
-          </h1>
-          <p class="hero-subtitle fade-in-delay">
-            Premium body work, paint, and detailing services that restore your
-            vehicle to perfection
-          </p>
-          <div class="hero-buttons fade-in-delay-2">
-            <a href="#services" class="btn btn-primary">Our Services</a>
-            <a href="#contact" class="btn btn-secondary">Get a Quote</a>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Our Premium <span class="golden">Services</span>
-          </h2>
-          <p class="section-subtitle">
-            We specialize in bringing your vehicle back to showroom condition
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-hammer"></i>
-            </div>
-            <h3>Body Repair</h3>
+          <div class="services-header">
+            <p class="section-label">Excellence in Action</p>
+            <h2 class="section-title">Our Elite Auto Services</h2>
+            <div class="section-rule"></div>
             <p>
-              Expert collision repair and dent removal. We restore your
-              vehicle's structural integrity and appearance using
-              state-of-the-art equipment and techniques.
+              From minor scratch removal to complete collision rebuilding, E.H.
+              Auto Repair delivers premium craftsmanship with an uncompromising
+              attention to detail.
             </p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Collision damage repair</li>
-              <li>
-                <i class="fas fa-check"></i> Dent removal & panel replacement
-              </li>
-              <li><i class="fas fa-check"></i> Frame straightening</li>
-            </ul>
           </div>
 
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-spray-can"></i>
-            </div>
-            <h3>Paint</h3>
-            <p>
-              Professional automotive painting services with premium quality
-              finishes. We match factory colors perfectly and ensure a flawless,
-              long-lasting finish.
-            </p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Full vehicle painting</li>
-              <li><i class="fas fa-check"></i> Color matching & blending</li>
-              <li><i class="fas fa-check"></i> Custom paint jobs</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-award"></i>
-            </div>
-            <h3>Paint Correction</h3>
-            <p>
-              Remove swirl marks, scratches, and oxidation to restore your
-              paint's original brilliance. Multi-stage polishing for a
-              mirror-like finish.
-            </p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Swirl mark removal</li>
-              <li><i class="fas fa-check"></i> Scratch elimination</li>
-              <li><i class="fas fa-check"></i> Oxidation restoration</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-gem"></i>
-            </div>
-            <h3>Cut & Buff</h3>
-            <p>
-              Professional polishing and buffing services that bring out the
-              deep gloss and shine in your vehicle's paintwork. Perfect for
-              revitalizing aged paint.
-            </p>
-            <ul class="service-features">
-              <li><i class="fas fa-check"></i> Deep paint polishing</li>
-              <li><i class="fas fa-check"></i> High-gloss finishing</li>
-              <li><i class="fas fa-check"></i> Clear coat protection</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="services-cta">
-          <p>
-            Need something else? We offer comprehensive auto repair solutions
-            tailored to your needs.
-          </p>
-          <a href="#contact" class="btn btn-primary">Contact Us Today</a>
-        </div>
-
-        <div class="insurance-section">
-          <div class="insurance-content">
-            <div class="insurance-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <div class="insurance-text">
-              <h3>We Work With All Insurance Companies</h3>
+          <div class="services-grid">
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4M12 16h.01"/></svg>
+              </div>
+              <h3>Collision & Body Repair</h3>
               <p>
-                We handle the entire insurance claim process for you. From
-                documentation to direct billing, we work with all major
-                insurance providers to make your repair experience stress-free
-                and seamless.
+                Complete structural repair using computerized measuring systems
+                to restore your vehicle to factory safety specifications.
               </p>
-            </div>
+            </article>
+
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14.5 3.5 3 3L7 17l-4 1 1-4Z"/><path d="m13 7 3 3"/></svg>
+              </div>
+              <h3>Premium Custom Painting</h3>
+              <p>
+                Downdraft spray booths and advanced computerized color matching
+                guarantee a flawless finish.
+              </p>
+            </article>
+
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3>Frame Straightening</h3>
+              <p>
+                Advanced frame straightening equipment restores your vehicle's
+                structural integrity, ensuring proper safety, handling, and
+                suspension alignment after collision damage.
+              </p>
+            </article>
+
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h3>Paintless Dent Removal</h3>
+              <p>
+                Advanced techniques to massage dents out from behind the panel,
+                preserving your vehicle's original factory paint.
+              </p>
+            </article>
+
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2 6.3-6.4 2.1 2-6.3z"/></svg>
+              </div>
+              <h3>Scratch & Chip Correction</h3>
+              <p>
+                Professional spot repairs, advanced wet sanding, and paint
+                touch-ups that make scrapes and rock chips vanish.
+              </p>
+            </article>
+
+            <article class="service-card glass-panel glass-panel-hover">
+              <div class="service-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0h0c-.83-.83-.83-2.17 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25L8.29 2.08l-1.25 1.25"/><path d="m2 2 20 20"/></svg>
+              </div>
+              <h3>Mechanical Repair</h3>
+              <p>
+                From routine maintenance to complex diagnostics, our certified
+                technicians deliver reliable repairs with precision and care.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            What Our <span class="golden">Clients Say</span>
-          </h2>
-          <p class="section-subtitle">
-            Don't just take our word for it - hear from our satisfied customers
-          </p>
-        </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "Absolutely phenomenal work! My car looked brand new after their
-              paint correction service. The attention to detail is unmatched.
-              They truly care about quality and customer satisfaction."
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="gallery-header">
+            <p class="section-label">Our Masterpieces</p>
+            <h2 class="section-title">Finished Work Showcase</h2>
+            <div class="section-rule"></div>
+            <p>
+              Explore our work. Here are some of the luxury, sports, and custom
+              vehicles finished to perfection at E.H. Auto Repair.
             </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Michael Rodriguez</h4>
-                <p>BMW 3 Series Owner</p>
-              </div>
-            </div>
           </div>
 
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "After a collision, I was devastated. EH Auto Repair handled
-              everything with my insurance and restored my car perfectly. It's
-              like the accident never happened. Highly recommended!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Sarah Thompson</h4>
-                <p>Mercedes-Benz Owner</p>
-              </div>
-            </div>
+          <div class="gallery-filters" id="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Show All</button>
+            <button class="filter-btn" data-filter="collision">Collision Repair</button>
+            <button class="filter-btn" data-filter="paint">Custom Paint</button>
+            <button class="filter-btn" data-filter="detailing">Polish</button>
           </div>
 
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "Professional, reliable, and exceptional craftsmanship. Their cut
-              & buff service brought back the shine to my 10-year-old car. It
-              looks better than when I bought it! Worth every penny."
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>David Chen</h4>
-                <p>Toyota Camry Owner</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "The team at EH Auto Repair went above and beyond. They kept me
-              updated throughout the entire repair process and delivered ahead
-              of schedule. The quality is outstanding!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Jennifer Martinez</h4>
-                <p>Honda Accord Owner</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "Best auto body shop in town! Fair pricing, honest service, and
-              incredible results. My truck's custom paint job turned out better
-              than I imagined. These guys are true artists!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Robert Williams</h4>
-                <p>Ford F-150 Owner</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <p class="testimonial-text">
-              "I've been bringing my cars here for years. Consistent excellence
-              every single time. They treat every vehicle like it's their own.
-              Trustworthy and skilled - you can't ask for more!"
-            </p>
-            <div class="testimonial-author">
-              <div class="author-avatar">
-                <i class="fas fa-user"></i>
-              </div>
-              <div class="author-info">
-                <h4>Lisa Anderson</h4>
-                <p>Loyal Customer</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Our <span class="golden">Work</span></h2>
-          <p class="section-subtitle">
-            See the transformation we deliver with every project
-          </p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-              "
-            >
+          <div class="gallery-grid" id="gallery-grid">
+            <div class="gallery-item" data-category="collision" data-index="0">
+              <img src="assets/hero_bg.png" alt="Chassis Alignment & Tuning" />
               <div class="gallery-overlay">
-                <h4>Body Repair Excellence</h4>
-                <p>Complete collision restoration</p>
+                <div class="gallery-eye"><span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span></div>
+                <div class="gallery-meta">
+                  <span class="cat">Collision Repair</span>
+                  <h3>Chassis Alignment & Tuning</h3>
+                  <p>Premium Porsche body restoration & precision suspension tuning.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(135deg, #d4a024 0%, #b8860b 100%);
-              "
-            >
+
+            <div class="gallery-item" data-category="paint" data-index="1">
+              <img src="assets/paint_job.png" alt="Satin Black Refinishing" />
               <div class="gallery-overlay">
-                <h4>Premium Paint Job</h4>
-                <p>Custom color application</p>
+                <div class="gallery-eye"><span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span></div>
+                <div class="gallery-meta">
+                  <span class="cat">Custom Paint</span>
+                  <h3>Satin Black Refinishing</h3>
+                  <p>Computerized multi-stage painting & gloss correction.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-              "
-            >
+
+            <div class="gallery-item" data-category="collision" data-index="2">
+              <img src="assets/collision_repair.png" alt="Body Panel Reconstruction" />
               <div class="gallery-overlay">
-                <h4>Paint Correction</h4>
-                <p>Mirror-like finish restoration</p>
+                <div class="gallery-eye"><span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span></div>
+                <div class="gallery-meta">
+                  <span class="cat">Collision Repair</span>
+                  <h3>Body Panel Reconstruction</h3>
+                  <p>High-grade carbon fiber repair & structural reinforcement.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  #1a1a1a 0%,
-                  #d4a024 50%,
-                  #1a1a1a 100%
-                );
-              "
-            >
+
+            <div class="gallery-item" data-category="detailing" data-index="3">
+              <img src="assets/detailing.png" alt="9H Ceramic Coating Polish" />
               <div class="gallery-overlay">
-                <h4>Cut & Buff Detail</h4>
-                <p>Show car perfection</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(135deg, #b8860b 0%, #d4a024 100%);
-              "
-            >
-              <div class="gallery-overlay">
-                <h4>Full Restoration</h4>
-                <p>From damaged to flawless</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div
-              class="gallery-image"
-              style="
-                background: linear-gradient(135deg, #2d2d2d 0%, #b8860b 100%);
-              "
-            >
-              <div class="gallery-overlay">
-                <h4>Detail Work</h4>
-                <p>Precision craftsmanship</p>
+                <div class="gallery-eye"><span>
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span></div>
+                <div class="gallery-meta">
+                  <span class="cat">Polish</span>
+                  <h3>9H Ceramic Coating Polish</h3>
+                  <p>Deep gloss wet-look finish & paint protection film detail.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="gallery-note">
-          <p>
-            <i class="fas fa-camera"></i> Want to see real photos? Contact us
-            for our complete portfolio of finished projects!
-          </p>
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+          <button class="lightbox-close" id="lightbox-close" aria-label="Close modal">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+          <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div class="lightbox-content">
+            <div class="lightbox-image">
+              <img id="lightbox-img" src="" alt="" />
+            </div>
+            <div class="lightbox-info">
+              <span class="cat" id="lightbox-cat"></span>
+              <h4 id="lightbox-title"></h4>
+              <p id="lightbox-desc"></p>
+            </div>
+          </div>
+          <button class="lightbox-next" id="lightbox-next" aria-label="Next image">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Get In <span class="golden">Touch</span>
-          </h2>
-          <p class="section-subtitle">
-            Ready to restore your vehicle to perfection? Reach out today!
-          </p>
-        </div>
-
-        <div class="contact-content">
+      <section class="contact" id="contact">
+        <div class="container contact-grid">
           <div class="contact-info">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <h3>Phone</h3>
-              <p><a href="tel:+15551234567">(555) 123-4567</a></p>
-              <p class="contact-note">Call us for immediate assistance</p>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <h3>Location</h3>
-              <p>123 Auto Repair Lane</p>
-              <p>Your City, ST 12345</p>
-              <p class="contact-note">Visit our shop</p>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <h3>Email</h3>
+            <div class="contact-intro">
+              <p class="section-label">Let's Connect</p>
+              <h2 class="section-title">Schedule Your Appointment</h2>
+              <div class="section-rule-left"></div>
               <p>
-                <a href="mailto:info@ehautorepair.com">info@ehautorepair.com</a>
+                Ready to restore your vehicle to immaculate condition? Get in
+                touch with our team or schedule an appointment. We'll get back
+                to you within 2 business hours.
               </p>
-              <p class="contact-note">Send us your questions</p>
+            </div>
+
+            <div class="contact-cards">
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4>Call Us Directly</h4>
+                  <a href="tel:+19162565196">+1 (916) 256-5196</a>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h4>Email Inquiry</h4>
+                  <a href="mailto:e.h.autorepair1@gmail.com">e.h.autorepair1@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="contact-card-icon">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Location</h4>
+                  <a
+                    href="https://maps.apple/p/d74IMKTKX-yJKZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    4265 Power Inn Rd Sacramento
+                    <span class="sub">CA 95826 United States</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="social-section">
-            <h3>Follow Us</h3>
-            <p>Stay updated with our latest projects and special offers</p>
-            <div class="social-links">
-              <a
-                href="https://instagram.com/ehautorepair"
-                target="_blank"
-                class="social-link instagram"
-              >
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-              </a>
-              <a
-                href="https://facebook.com/ehautorepair"
-                target="_blank"
-                class="social-link facebook"
-              >
-                <i class="fab fa-facebook-f"></i>
-                <span>Facebook</span>
-              </a>
+          <div class="form-panel glass-panel">
+            <div class="form-success" id="form-success">
+              <div class="form-success-icon">
+                <svg class="icon" style="width:2.5rem;height:2.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+              </div>
+              <h3>Booking Request Sent</h3>
+              <p>
+                Thank you! Your inquiry was successfully received. An E.H. Auto
+                representative will call you shortly to confirm your booking.
+              </p>
+              <button type="button" class="form-reset" id="form-reset">
+                Send Another Request
+              </button>
             </div>
-          </div>
 
-          <div class="hours-section">
-            <h3>Business Hours</h3>
-            <div class="hours-list">
-              <div class="hour-item">
-                <span>Monday - Friday</span>
-                <span>8:00 AM - 6:00 PM</span>
+            <form id="booking-form">
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input id="name" name="name" type="text" required placeholder="John Doe" />
+                </div>
+                <div class="field">
+                  <label for="email">Email Address</label>
+                  <input id="email" name="email" type="email" required placeholder="john@example.com" />
+                </div>
               </div>
-              <div class="hour-item">
-                <span>Saturday</span>
-                <span>9:00 AM - 4:00 PM</span>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input id="phone" name="phone" type="tel" required placeholder="(555) 000-0000" />
+                </div>
+                <div class="field dropdown" id="service-dropdown">
+                  <label>Service Category</label>
+                  <button type="button" class="dropdown-btn" id="service-btn">
+                    <span class="placeholder" id="service-label">Select a Service</span>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                  </button>
+                  <input type="hidden" name="service" id="service" />
+                  <div class="dropdown-menu" id="service-menu">
+                    <button type="button" data-value="Collision & Body Repair">Collision & Body Repair</button>
+                    <button type="button" data-value="Premium Custom Paint">Premium Custom Paint</button>
+                    <button type="button" data-value="Frame Straightening">Frame Straightening</button>
+                    <button type="button" data-value="Paintless Dent Removal">Paintless Dent Removal</button>
+                    <button type="button" data-value="Polish">Polish</button>
+                  </div>
+                </div>
               </div>
-              <div class="hour-item">
-                <span>Sunday</span>
-                <span>Closed</span>
+
+              <div class="field" style="margin-bottom: 1.5rem">
+                <label for="message">Vehicle Details & Damage Notes</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Please enter your car make, model, year, and a description of the damage or services required."
+                ></textarea>
               </div>
-            </div>
+
+              <button type="submit" class="btn-gold" style="width: 100%">
+                Submit Booking Request
+              </button>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
+      <section class="location" id="location">
+        <div class="location-header">
+          <p class="section-label">Find Us Here</p>
+          <h2 class="section-title">Our Location In Map</h2>
+          <div class="section-rule"></div>
+        </div>
+        <a
+          class="location-map"
+          href="https://maps.apple/p/d74IMKTKX-yJKZ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/location-map.png" alt="E.H. Auto Repair Location" />
+        </a>
+      </section>
+    </main>
+
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <a href="#home" class="logo">
-              <img src="assets/logo.png" alt="E.H. Auto Repair" class="logo-img" />
-              <span>EH AUTO REPAIR</span>
-            </a>
-            <p>
-              Excellence in auto body repair and painting since day one. Your
-              trusted partner for vehicle restoration.
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="footer-brand">
+              <img src="assets/favicon.png" alt="E.H. Auto Repair Logo" />
+              <span>E.H. <em>AUTO</em></span>
+            </div>
+            <p class="footer-copy">
+              Providing specialized collision restoration, elite custom
+              painting, and premium vehicle detailing. Committed to returning
+              your vehicle to factory safety specifications with a flawless
+              finish.
             </p>
           </div>
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+
+          <div>
+            <h3 class="footer-heading">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>Shop Hours</span>
+            </h3>
+            <div class="footer-hours">
+              <div><span>Monday - Friday</span><strong>8:00 AM - 6:00 PM</strong></div>
+              <div><span>Saturday</span><strong>9:00 AM - 4:00 PM</strong></div>
+              <div><span>Sunday</span><strong class="closed">Closed</strong></div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-heading"><span>Connect</span></h3>
+            <ul class="footer-links">
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <a href="tel:+19162565196">+1 (916) 256-5196</a>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/></svg>
+                <a href="mailto:e.h.autorepair1@gmail.com">e.h.autorepair1@gmail.com</a>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                <a href="https://maps.apple/p/d74IMKTKX-yJKZ" target="_blank" rel="noopener noreferrer">
+                  4265 Power Inn Rd Sacramento, CA 95826 United States
+                </a>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="m4.188 10.095.736-.17.073-.02A.813.813 0 0 0 5.45 8.65a1 1 0 0 0-.3-.258 3 3 0 0 0-.428-.198l-.808-.295a76 76 0 0 0-1.364-.493C2.253 7.3 2 7.208 1.783 7.14c-.041-.013-.087-.025-.124-.038a2.1 2.1 0 0 0-.606-.116.72.72 0 0 0-.572.245 2 2 0 0 0-.105.132 1.6 1.6 0 0 0-.155.309c-.15.443-.225.908-.22 1.376.002.423.013.966.246 1.334a.8.8 0 0 0 .22.24c.166.114.333.129.507.141.26.019.513-.045.764-.103l2.447-.566zm8.219-3.911a4.2 4.2 0 0 0-.8-1.14 1.6 1.6 0 0 0-.275-.21 2 2 0 0 0-.15-.073.72.72 0 0 0-.621.031c-.142.07-.294.182-.496.37-.028.028-.063.06-.094.089-.167.156-.353.35-.574.575q-.51.516-1.01 1.042l-.598.62a3 3 0 0 0-.298.365 1 1 0 0 0-.157.364.8.8 0 0 0 .007.301q0 .007.003.013a.81.81 0 0 0 .945.616l.074-.014 3.185-.736c.251-.058.506-.112.732-.242.151-.088.295-.175.394-.35a.8.8 0 0 0 .093-.313c.05-.434-.178-.927-.36-1.308M6.706 7.523c.23-.29.23-.722.25-1.075.07-1.181.143-2.362.201-3.543.022-.448.07-.89.044-1.34-.022-.372-.025-.799-.26-1.104C6.528-.077 5.644-.033 5.04.05q-.278.038-.553.104a8 8 0 0 0-.543.149c-.58.19-1.393.537-1.53 1.204-.078.377.106.763.249 1.107.173.417.41.792.625 1.185.57 1.036 1.15 2.066 1.728 3.097.172.308.36.697.695.857q.033.015.068.025c.15.057.313.068.469.032l.028-.007a.8.8 0 0 0 .377-.226zm-.276 3.161a.74.74 0 0 0-.923-.234 1 1 0 0 0-.145.09 2 2 0 0 0-.346.354c-.026.033-.05.077-.08.104l-.512.705q-.435.591-.861 1.193c-.185.26-.346.479-.472.673l-.072.11c-.152.235-.238.406-.282.559a.7.7 0 0 0-.03.314c.013.11.05.217.108.312q.046.07.1.138a1.6 1.6 0 0 0 .257.237 4.5 4.5 0 0 0 2.196.76 1.6 1.6 0 0 0 .349-.027 2 2 0 0 0 .163-.048.8.8 0 0 0 .278-.178.7.7 0 0 0 .17-.266c.059-.147.098-.335.123-.613l.012-.13c.02-.231.03-.502.045-.821q.037-.735.06-1.469l.033-.87a2.1 2.1 0 0 0-.055-.623 1 1 0 0 0-.117-.27Zm5.783 1.362a2.2 2.2 0 0 0-.498-.378l-.112-.067c-.199-.12-.438-.246-.719-.398q-.644-.353-1.295-.695l-.767-.407c-.04-.012-.08-.04-.118-.059a2 2 0 0 0-.466-.166 1 1 0 0 0-.17-.018.74.74 0 0 0-.725.616 1 1 0 0 0 .01.293c.038.204.13.406.224.583l.41.768q.341.65.696 1.294c.152.28.28.52.398.719q.036.057.068.112c.145.239.261.39.379.497a.73.73 0 0 0 .596.201 2 2 0 0 0 .168-.029 1.6 1.6 0 0 0 .325-.129 4 4 0 0 0 .855-.64c.306-.3.577-.63.788-1.006q.045-.08.076-.165a2 2 0 0 0 .051-.161q.019-.083.029-.168a.8.8 0 0 0-.038-.327.7.7 0 0 0-.165-.27"/></svg>
+                <a href="https://yelp.to/Wd8NalztYN" target="_blank" rel="noopener noreferrer">https://yelp.to/Wd8NalztYN</a>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+                <a href="https://www.instagram.com/e.h.autorepair" target="_blank" rel="noopener noreferrer">
+                  https://www.instagram.com/e.h.autorepair
+                </a>
+              </li>
             </ul>
           </div>
-          <div class="footer-contact">
-            <h4>Contact Info</h4>
-            <p><i class="fas fa-phone"></i> (555) 123-4567</p>
-            <p><i class="fas fa-envelope"></i> info@ehautorepair.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> 123 Auto Repair Lane</p>
-          </div>
         </div>
+
         <div class="footer-bottom">
-          <p>
-            &copy; 2025 EH Auto Repair. All rights reserved. | Crafted with
-            <i class="fas fa-heart"></i> for automotive excellence
-          </p>
+          <p>© <span id="year"></span> E.H. Auto Repair. All rights reserved.</p>
+          <div class="footer-legal">
+            <p>Privacy Policy</p>
+            <span>•</span>
+            <p>Terms of Service</p>
+          </div>
         </div>
       </div>
     </footer>
